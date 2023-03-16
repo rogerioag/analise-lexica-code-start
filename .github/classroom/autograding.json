@@ -1,34 +1,14 @@
 {
   "tests": [
     {
-      "name": "teste-001",
-      "setup": "sudo -H pip3 install ply",
-      "run": "python tpplex.py tests/teste-001.tpp",
+      "name": "Testes para a Análise Léxica",
+      "setup": "sudo -H pip3 install pytest ply",
+      "run": "pytest",
       "input": "",
-      "output": "INTEIRO\nDOIS_PONTOS\nID\nVIRGULA\nID",
-      "comparison": "exact",
+      "output": "",
+      "comparison": "included",
       "timeout": 10,
-      "points": null
-    },
-    {
-      "name": "teste-002",
-      "setup": "sudo -H pip3 install ply",
-      "run": "python tpplex.py tests/teste-002.tpp",
-      "input": "",
-      "output": "\nINTEIRO\nDOIS_PONTOS\nID\nVIRGULA\nID\nINTEIRO\nID\nABRE_PARENTESE\nINTEIRO\nDOIS_PONTOS\nID\nFECHA_PARENTESE\nFLUTUANTE\nDOIS_PONTOS\nID\nID\nATRIBUICAO\nNUM_PONTO_FLUTUANTE\nINTEIRO\nDOIS_PONTOS\nID\nSE\nID\nMAIOR\nNUM_INTEIRO\nENTAO\nSE\nID\nMAIOR\nNUM_INTEIRO\nENTAO\nID\nATRIBUICAO\nNUM_INTEIRO\nREPITA\nREPITA\nID\nATRIBUICAO\nID\nVEZES\nID\nATE\nID\nIGUAL\nNUM_INTEIRO\nID\nATRIBUICAO\nID\nVEZES\nID\nATE\nID\nIGUAL\nNUM_INTEIRO\nSENAO\nID\nATRIBUICAO\nNUM_INTEIRO\nFIM\nFIM\nINTEIRO\nDOIS_PONTOS\nID\nID\nATRIBUICAO\nABRE_PARENTESE\nNUM_INTEIRO\nMAIS\nNUM_INTEIRO\nFECHA_PARENTESE\nVEZES\nNUM_INTEIRO\nID\nATRIBUICAO\nNUM_INTEIRO\nMAIS\nNUM_INTEIRO\nVEZES\nNUM_INTEIRO\nID\nATRIBUICAO\nMENOS\nNUM_INTEIRO\nMENOS\nABRE_PARENTESE\nNUM_INTEIRO\nMAIS\nNUM_INTEIRO\nFECHA_PARENTESE\nID\nATRIBUICAO\nNUM_INTEIRO\nMENOS\nNUM_INTEIRO\nID\nATRIBUICAO\nNUM_INTEIRO\nVEZES\nNUM_INTEIRO\nFIM\nINTEIRO\nID\nABRE_PARENTESE\nFECHA_PARENTESE\nLEIA\nABRE_PARENTESE\nID\nFECHA_PARENTESE\nESCREVA\nABRE_PARENTESE\nID\nABRE_PARENTESE\nID\nABRE_PARENTESE\nNUM_INTEIRO\nFECHA_PARENTESE\nFECHA_PARENTESE\nFECHA_PARENTESE\nFIM\nNUM_INTEIRO\nMAIS\nNUM_INTEIRO",
-      "comparison": "exact",
-      "timeout": 10,
-      "points": null
-    },
-    {
-      "name": "teste-003",
-      "setup": "sudo -H pip3 install ply",
-      "run": "python tpplex.py tests/teste-003.tpp",
-      "input": "",
-      "output": "INTEIRO\nID\nABRE_PARENTESE\nFECHA_PARENTESE\nID\nATRIBUICAO\nMAIS\nNUM_INTEIRO\nID\nATRIBUICAO\nID\nMAIS\nID\nID\nATRIBUICAO\nNUM_INTEIRO\nMAIS\nID\nID\nATRIBUICAO\nMAIS\nNUM_INTEIRO\nID\nATRIBUICAO\nMAIS\nNUM_PONTO_FLUTUANTE\nID\nATRIBUICAO\nNUM_PONTO_FLUTUANTE\nMAIS\nNUM_PONTO_FLUTUANTE\nFIM",
-      "comparison": "exact",
-      "timeout": 10,
-      "points": null
+      "points": 3
     }
   ]
 }
