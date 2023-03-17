@@ -1,5 +1,6 @@
 import tpplex
 import subprocess
+import os, fnmatch
 
 def execute_test(input_file):
     path_file = 'tests/' + input_file
@@ -22,11 +23,15 @@ def execute_test(input_file):
     return stdout.decode("utf-8") == expected_output
 
 
-def teste_001():
-    assert execute_test("teste-001.tpp") == True
+#def teste_001():
+#    assert execute_test("teste-001.tpp") == True
 
-def teste_002():
-    assert execute_test("teste-002.tpp") == True
+#def teste_002():
+#    assert execute_test("teste-002.tpp") == True
 
-def teste_003():
-    assert execute_test("teste-003.tpp") == True
+#def teste_003():
+#    assert execute_test("teste-003.tpp") == True
+
+def testes():
+    for file in fnmatch.filter(os.listdir('tests'), '*.tpp'):
+        assert execute_test(file) == True
