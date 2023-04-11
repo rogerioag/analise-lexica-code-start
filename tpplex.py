@@ -1,6 +1,9 @@
+import sys
+import os
 from ply.lex import TOKEN
 import ply.lex as lex
 from sys import argv, exit
+from myerror import MyError
 
 import logging
 logging.basicConfig(
@@ -11,6 +14,7 @@ logging.basicConfig(
 )
 log = logging.getLogger()
 
+le = MyError('LexerErrors')
 
 tokens = [
     "ID",  # identificador
@@ -167,8 +171,7 @@ def t_error(token):
     # file = token.lexer.filename
     line = token.lineno
     # column = define_column(token.lexer.backup_data, token.lexpos)
-    message = "Caracter inválido '%s'" % token.value[0]
-
+    message = le.newError('ERR-LEX-INV-CHAR', valor=token.value[0])
     # print(f"[{file}]:[{line},{column}]: {message}.")
     print(message)
 
@@ -178,22 +181,29 @@ def t_error(token):
 
 
 def main():
+
+    if(len(sys.argv) < 2):
+        raise TypeError(le.newError('ERR-LEX-USE'))
+
     aux = argv[1].split('.')
     if aux[-1] != 'tpp':
-      raise IOError("Not a .tpp file!")
-    data = open(argv[1])
+      raise IOError(le.newError('ERR-LEX-NOT-TPP'))
+    elif not os.path.exists(argv[1]):
+        raise IOError(le.newError('ERR-LEX-FILE-NOT-EXISTS'))
+    else:
+        data = open(argv[1])
 
-    source_file = data.read()
-    lexer.input(source_file)
+        source_file = data.read()
+        lexer.input(source_file)
 
-    # Tokenize
-    while True:
-      tok = lexer.token()
-      if not tok:
-        break      # No more input
-      #print(tok)
-      print(tok.type)
-      #print(tok.value)
+        # Tokenize
+        while True:
+            tok = lexer.token()
+            if not tok:
+                break      # No more input
+            #print(tok)
+            print(tok.type)
+            #print(tok.value)
 
 def test(pdata):
   data = open(pdata)
@@ -215,6 +225,11 @@ def test(pdata):
 lexer = lex.lex(optimize=True, debug=True, debuglog=log)
 
 if __name__ == "__main__":
-    main()
 
+    try:
+        main()
+    except Exception as e:
+        print(e)
+    except (ValueError, TypeError):
+        print(e)
 
