@@ -3,12 +3,12 @@
     {
       "name": "Testes para a Análise Léxica",
       "setup": "sudo -H pip3 install pytest ply",
-      "run": "pytest",
+      "run": "pytest -v",
       "input": "",
       "output": "",
       "comparison": "included",
       "timeout": 10,
-      "points": 32
+      "points": 37
     }
   ]
 }

@@ -6,7 +6,7 @@ inteiro principal()
 			escreva("valor 10")
 		fim
 		a++
-	ate a=10
+	até a=10
 
-	reutn(0)
+	retorna(0)
 fim
