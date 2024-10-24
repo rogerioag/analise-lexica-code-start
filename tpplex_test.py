@@ -149,3 +149,6 @@ def test_036():
 
 def test_037():
     assert execute_test("bubble_sort-2020-2.tpp", "-k") == True
+
+def test_038():
+    assert execute_test("teste-006.tpp", "-k") == True
