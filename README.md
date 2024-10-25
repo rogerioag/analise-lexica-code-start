@@ -52,6 +52,15 @@ configparser
 logging
 ```
 
+O `PLY` é uma implementação do `lex` e `yacc` para Python. O módulo `ply.lex` implementa o componente de análise léxica do `PLY`, o nome `yacc` significa _"Yet Another Compiler Compiler"_ e é emprestado da ferramenta Unix.
+
+O `PLY` é implementado inteiramente em `Python` e usa o algoritmo `LR-parsing` o que é razoavelmente eficiente.
+
+* Site: [PLY](https://www.dabeaz.com/ply/) 
+* Artigo: [_Prototyping Interpreters using Python Lex-Yacc_ by Shannon Behrens, March 01, 2004](https://www.drdobbs.com/web-development/prototyping-interpreters-using-python-le/184405580)
+* [Documentação do PLY](https://www.dabeaz.com/ply/ply.html)
+* Github: [PLY 4.0](https://github.com/dabeaz/ply)
+
 ## Execução de Testes
 
 No projeto está sendo disponibilizado arquivos de exemplos em `TPP` para testes. Os testes estão no diretório `tests` do raiz do projeto.
