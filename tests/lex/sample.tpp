@@ -1,5 +1,5 @@
 {
-	computa se um numero eh primos
+	computa se um numero eh primo
 }
 inteiro: num
 
