@@ -1,3 +1,5 @@
+{ Busca_Linear_1061992 }
+
 
 inteiro: A[20]
 

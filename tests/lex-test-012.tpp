@@ -1,3 +1,5 @@
+{ comp }
+
 somar(inteiro: n[10])
     inteiro: soma
     inteiro: i

@@ -47,14 +47,14 @@ import os, fnmatch
 
 test_cases = [("", "-k"), ("teste.c", "-k")]
 
-for file in fnmatch.filter(os.listdir('tests/lex/'), '*.tpp'):
+for file in fnmatch.filter(os.listdir('tests'), '*.tpp'):
     test_cases.append((file, "-k"))
 
 
 @pytest.mark.parametrize("input_file, args", test_cases)
 def test_execute(input_file, args):
     if(input_file != ''):
-        path_file = 'tests/lex/' + input_file
+        path_file = 'tests/' + input_file
     else:
         path_file = ""
     
@@ -69,8 +69,8 @@ def test_execute(input_file, args):
     stdout, stderr = process.communicate()
     stdout, stderr
 
-    path_file = 'tests/lex/' + input_file
-    output_file = open(path_file + ".out", "r")
+    path_file = 'tests/' + input_file
+    output_file = open(path_file + ".lex.out", "r")
 
     #read whole file to a string
     expected_output = output_file.read()

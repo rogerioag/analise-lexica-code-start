@@ -1,3 +1,5 @@
+{ insertionSort }
+
 inteiro: n
 n := 10
 inteiro: a[n]

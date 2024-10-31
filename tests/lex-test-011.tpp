@@ -1,3 +1,4 @@
+{ Busca Linear }
 
 inteiro: A[20]
 

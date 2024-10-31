@@ -1,3 +1,5 @@
+{Hanoi}
+
 inteiro: count {Contador de Movimentos}
 inteiro: quantidade {Numero de Discos}
 {Funçao recursiva que movimenta os discos entre os pinos}

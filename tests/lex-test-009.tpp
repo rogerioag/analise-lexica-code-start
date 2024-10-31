@@ -1,3 +1,5 @@
+{ bubble sort }
+
 inteiro: vet[10]
 inteiro: tam
 
