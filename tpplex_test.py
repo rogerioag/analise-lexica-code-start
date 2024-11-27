@@ -45,7 +45,7 @@ import os, fnmatch
 #     ("bubble_sort-2020-2.tpp", "-k")
 # ]
 
-test_cases = [("", "-k"), ("teste.c", "-k")]
+test_cases = [("", "-k"), ("teste.c", "-k"), ("notexist.tpp", "-k")]
 
 for file in fnmatch.filter(os.listdir('tests'), '*.tpp'):
     test_cases.append((file, "-k"))
