@@ -22,7 +22,11 @@ class MyError():
         message = message + self.config.get(self.errorType, key)
       if(data):
         for key, value in data.items():
-          message = message + ", " f"{key}: {value}"
+          message = message +" "f"{key}: {value}"
+          if(len(data.items()) > 1):
+            message = message + ","
+        
+        message = message[:-1]
 
     # print(message)
       return message
